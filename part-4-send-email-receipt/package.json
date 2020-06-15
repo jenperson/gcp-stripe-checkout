@@ -1,0 +1,16 @@
+{
+    "name": "sample-http",
+    "version": "0.0.1",
+    "description": "Email a receipt using Stripe Webhooks and Cloud Run",
+    "main": "index.js",
+    "dependencies": {
+      "stripe": "^7.1.0",
+      "nodemailer": "^6.3.0"
+    },
+    "scripts": {
+      "start": "node index.js"
+    },
+    "author": "Jen Person",
+    "license":  "SEE LICENSE IN ../LICENSE"
+  }
+  

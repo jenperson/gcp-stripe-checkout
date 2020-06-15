@@ -1,0 +1,17 @@
+{
+  "name": "checkout-session",
+  "version": "0.0.1",
+  "description": "Checks out an item from the sock pattern store",
+  "main": "checkout.js",
+  "scripts": {
+    "start": "node checkout.js"
+  },
+  "author": "Jen Person",
+  "license": "SEE LICENSE IN ../LICENSE",
+  "dependencies": {
+    "@google-cloud/firestore": "^3.8.4",
+    "express": "^4.17.1",
+    "semver": "^7.3.2",
+    "stripe": "^8.56.0"
+  }
+}

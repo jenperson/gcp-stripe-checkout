@@ -1,0 +1,15 @@
+{
+  "name": "create-inventory-function",
+  "version": "1.0.0",
+  "description": "adds a list of demo inventory items to Stripe",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Jen Person",
+  "license":  "SEE LICENSE IN ../LICENSE",
+  "dependencies": {
+    "firebase-admin": "^8.12.1",
+    "stripe": "^8.63.0"
+  }
+}
