@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Custom sock crochet patterns - American Sock Market</title>
+    <meta
+      name="description"
+      content="Order custom crochet patterns for comfy socks."
+    />
+    <meta name="og:site_name" content="American Sock Market" />
+    <meta
+      name="og:description"
+      content="Order custom crochet pattenrs for comfy socks"
+    />
+    <link href="./normalize.css" rel="stylesheet" />
+    <link href="./global.css" rel="stylesheet" />
+    <script src="https://js.stripe.com/v3"></script>
+  </head>
+  <body>
+    <main>
+      <section class="img-preview">
+        <img src="img/product/sock-1.png" id="preview" />
+      </section>
+      <section class="content">
+        <p class="best-seller">
+          <img
+            src="img/best-seller.svg"
+            width="50%"
+            alt="A ribbon with a star"
+          />Best seller!
+        </p>
+        <h2>American Sock Market</h2>
+        <p>
+          Crochet comfy socks using our custom crochet patterns. Choose from
+          four fun funky designs!
+        </p>
+        <p>Select your pattern:</p>
+        <select id="select" class="sr-select">
+          <option
+            data-amount="599"
+            data-id="blue"
+            data-img="img/product/sock-4.png"
+          >
+            Blue
+          </option>
+        </select>
+        <div class="total">
+          <button id="pay-button">
+            <div class="loader hidden" id="spinner"></div>
+            <span id="label"
+              >Purchase for <span id="total-amount">$9.99</span>
+            </span>
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "upload-inventory-function",
+  "version": "1.0.0",
+  "description": "uploads a list of demo inventory items to Cloud Firestore",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Jen Person",
+  "license": "SEE LICENSE IN ../LICENSE",
+  "dependencies": {
+    "firebase-admin": "^8.12.1"
+  }
+}

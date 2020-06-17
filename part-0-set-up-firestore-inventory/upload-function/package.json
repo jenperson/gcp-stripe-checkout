@@ -9,7 +9,6 @@
   "author": "Jen Person",
   "license": "SEE LICENSE IN ../LICENSE",
   "dependencies": {
-    "firebase-admin": "^8.12.1",
-    "stripe": "^8.60.0"
+    "firebase-admin": "^8.12.1"
   }
 }
