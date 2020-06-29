@@ -28,17 +28,15 @@ async function setData() {
   }
   try {
     collectionSnapshot.forEach(async (item) => {
-      let thisItem = item.data();
-      console.log(thisItem.name);
-      console.log(thisItem.description);
-      console.log(thisItem.images[0]);
+      const thisItem = item.data();
+      console.log(thisItem.name); // just for fun, log the items
       const stripeProduct = await stripe.products.create(
         {
           name: thisItem.name,
           description: thisItem.description,
           images: [thisItem.images[0]]
       });
-      let product = stripeProduct.id;
+      const product = stripeProduct.id;
       // create a price object for the item
       await stripe.prices.create({
         product: product,
