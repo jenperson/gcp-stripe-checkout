@@ -9,8 +9,8 @@
   "author": "Jen Person",
   "license": "SEE LICENSE IN ../LICENSE",
   "dependencies": {
-    "@google-cloud/firestore": "^3.8.4",
     "express": "^4.17.1",
+    "firebase-admin": "^9.0.0",
     "semver": "^7.3.2",
     "stripe": "^8.56.0"
   }

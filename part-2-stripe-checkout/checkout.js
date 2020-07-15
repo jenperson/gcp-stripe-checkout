@@ -13,19 +13,17 @@
 // limitations under the License.
 
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const Firestore = require('@google-cloud/firestore');
+const admin = require('firebase-admin');
 const express = require('express');
 const app = express();
+admin.initializeApp();
+const db = admin.firestore()
 
 const PROJECT_NAME = process.env.PROJECT_NAME;
 const DOMAIN = process.env.DOMAIN;
 
 // Endpoint defintion
 app.get('/session', async (req, res) => {
-  const db = new Firestore({
-    projectId: PROJECT_NAME,
-    timestampsInSnapshots: true
-  });
 
   res.set('Access-Control-Allow-Origin', '*');
 
