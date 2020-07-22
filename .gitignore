@@ -69,3 +69,4 @@ build/Release
 
 **/package-lock.json
 .firebaserc
+**/service.yaml
