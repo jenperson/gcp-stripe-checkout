@@ -16,27 +16,27 @@ const stripe = Stripe('pk_test_ABCde');
 const db = firebase.firestore();
 const sockRef = db.collection('socks');
 let selectedProduct;
+let productList = "";
 
-  let productList = "";
-  sockRef.get().then(querySnapshot => {
-    querySnapshot.forEach(doc => {
-      const data = doc.data();
-      let name = data.name;
-      // capitalize first letter for display purposes
-      let displayName = name.charAt(0).toUpperCase() + name.slice(1);
-      if (!selectedProduct) {
-        selectedProduct = name;
-      }
-      const amount = data.price;
-      const image = data.images[0];
-      productList = productList+`<option data-amount="${amount}" data-id="${name}" data-img="${image}">${displayName}</option>`
-    });
-    document.getElementById("select").innerHTML = productList;
-  })
-  .catch(function(error) {
-    console.log("Error getting documents: ", error);
-    return error;
+sockRef.get().then(querySnapshot => {
+  querySnapshot.forEach(doc => {
+    const data = doc.data();
+    let name = data.name;
+    // capitalize first letter for display purposes
+    let displayName = name.charAt(0).toUpperCase() + name.slice(1);
+    if (!selectedProduct) {
+      selectedProduct = name;
+    }
+    const amount = data.price;
+    const image = data.images[0];
+    productList = productList+`<option data-amount="${amount}" data-id="${name}" data-img="${image}">${displayName}</option>`
   });
+  document.getElementById("select").innerHTML = productList;
+})
+.catch(function(error) {
+  console.log("Error getting documents: ", error);
+  return error;
+});
 
 document
 .getElementById("pay-button")
